@@ -56,7 +56,7 @@ footer {
 .pokemon-card {
     display: flex;
     justify-content: center;
-    width: 22rem;
+    width: 14rem;
     padding:2rem;
     justify-content: center;
     flex-direction: column;
