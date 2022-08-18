@@ -19,6 +19,7 @@ const searchform = document.getElementById('search-form');
 //li passem l'id de searchboxi el guardem a una variable
 const searchbox = document.getElementById('searchbox');
 
+
 //El mètode addEventListener() enllaça un controlador d'esdeveniments a un document.
 //aAaquest form quan hi ha un event i hi farem anar una funció, la onSubmit, quan fem intro ens busca el que hem posat
 //L'event submit s'activa quan s'envia un <form>(el tinc a l'html), quan l'usuari fa clic en un botó d'enviament ( <button> o <input type="submit")
@@ -43,10 +44,53 @@ const clearName = () => {
     searchbox.value = "";
 }
 
+function getRandom() {
+    //genero un número random entre 1 i els pokemons que hi ha
+    //poso un número més dels pokémon que hi ha, ja que el random sempre torna un número menys
+    return Math.floor(Math.random() * 900) + 1;
+  }
+
+//FUNCIÓ QUE CRIDAREM PER OBTENIR UN POKÉMON ALEATÒRI
+async function aleatoriPokemon() {
+    try {
+        //fetch per obtenir la informació
+        //agafem la url per buscar, la q per buscar el pais o ciutat i a 
+        //part li passem la clau de l'api i el llenguatge que és espanyol, el fetch pot ser amb la url de la api només
+        //li passo la query, que és el nom del pokemon que buscarem, si ens hi fixem 
+        //api.url + query és:https://pokeapi.co/api/v2/pokemon/+ nom pokemon que busquem
+        const response = await fetch(`${api.url}${getRandom()}`);
+        //per obtenir la data
+        const pokeData = await response.json();
+
+        //per assegurarnos que les dades està sent passades
+        console.log(pokeData);
+        //anem a remplaçar les dades que tenim per les que ens dona la api
+        //innerHTML és per p, a, span i link, quna volem que es vegi algo a la pantalla a nivell de text
+        img.src = pokeData.sprites.front_default || "https://www.elnacional.cat/uploads/s1/18/23/44/74/3852649_2_302x302.jpeg";
+        namePoke.innerHTML = pokeData.species.name;
+        height.innerHTML = `Alçada: ${pokeData.height/10} M`;
+        weight.innerHTML = `Pes: ${pokeData.weight/10} Kg`; 
+        //accedeixo a types que és un array, indico la posició de l'array on vull entrar
+        //que és la 0, on hi ha el type i el name
+        typePoke.innerHTML = `Tipus: ${pokeData.types[0].type.name}`
+
+        //id de pokemon card de l'html. La propietat flex estableix o 
+        //retorna la longitud de l'element, en relació amb la resta d'elements flexibles dins del mateix contenidor.
+        card.style.display = "flex";
+
+        //natejem el nom de la ciutat buscada amb aquesta funció
+        clearName();
+    } catch (err) {
+        console.log(err);
+        alert('BUSCA UN POKÉMON VÀLID')
+    }
+}
+
 //la funció amb la qual cridem la api, la funcio fetch, que porta un input on hi passarem la url
 //rep la informacuó de dins de search pokemon i la extreu
 //valorSearchBox és el searchbox value, és a dir el nom (pokémon si s'ha fet bé) que hem posat al searchbox
 //el valor de dins el searchbox
+//FUNCIÓ PER BUSCAR POKËMON PER NOM
 async function searchPokemon(valorSearchBox) {
     try {
         //fetch per obtenir la informació
@@ -78,12 +122,6 @@ async function searchPokemon(valorSearchBox) {
         clearName();
     } catch (err) {
         console.log(err);
-        alert('HO SENTIM, hi ha hagut un ERROR!!')
+        alert('BUSCA UN POKÉMON VÀLID')
     }
 }
-
-
-
-
-
-
