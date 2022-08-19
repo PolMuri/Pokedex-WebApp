@@ -29,7 +29,7 @@
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 100%;
   font-weight: 900;
-  line-height: 1.5;
+  line-height: 0.3;
   margin: 2rem;
   padding: 0;
   text-transform: uppercase;
@@ -47,6 +47,8 @@
   display: none;
 }
 .btn-23 {
+  margin-left: 19%;
+  height:6%;
   border-radius: 99rem;
   border-width: 2px;
   overflow: hidden;
@@ -54,7 +56,6 @@
   position: relative;
 }
 .btn-23 span {
-  padding-left: 7px;
   display: grid;
   inset: 0;
   place-items: center;
@@ -157,7 +158,7 @@ p {
     justify-content: center;
     width: 290px;
     padding: 13px;
-    margin-left: 33px;
+    margin-left: 5px;
     justify-content: center;
     flex-direction: column;
     background-color: rgb(19, 9, 9);
@@ -224,13 +225,13 @@ p {
     outline: none;
 }
 
-@media only screen and (max-width: 365px) {
+@media only screen and (max-width: 373px) {
   .pokemon-card {
     position: relative;
     justify-content: center;
     width: 270px;
     padding: 11px;
-    margin-left: 33px;
+    margin-left: 5%;
     justify-content: center;
     flex-direction: column;
     background-color: rgb(19, 9, 9);
