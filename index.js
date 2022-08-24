@@ -14,6 +14,9 @@ const namePoke = document.getElementById('pokemon-name');
 const height = document.getElementById('pokemon-height');
 const weight = document.getElementById('pokemon-weight');
 const typePoke = document.getElementById('pokemon-type');
+const hp = document.getElementById('pokemon-hp');
+const attack = document.getElementById('pokemon-attack');
+const defense = document.getElementById('pokemon-defense');
 //li passem l'id de search form i el guardem a una variable
 const searchform = document.getElementById('search-form');
 //li passem l'id de searchboxi el guardem a una variable
@@ -49,6 +52,24 @@ function getRandom() {
     //poso un número més dels pokémon que hi ha, ja que el random sempre torna un número menys
     return Math.floor(Math.random() * 900) + 1;
   }
+//funcio per obtenir els diferents tipus del pokemon que estan en un array, tipusPokemon representa una posició de l'array
+function getPokemonTypes(tipusPokemon){
+    //creo un array nou buit
+    let tipus = [];
+    //creo la constant pokemonType, on hi guardarem el .type.name de cada tipusPokemon (pokeData.types[i una posició])
+    //de l'array original que rebem que ens retorna els noms dels tipus així: pokeData.types[0].type.name
+    for (const pokemonType of tipusPokemon) {
+        //de tipusPokemon(al ser un for, cada posició de l'array que rebem) pokeData.types[i una posició]
+        //posem a l'array buit creat que es diu tipus el .type.name de cada posició de l'array que recorrem fent voltes amb el for
+        tipus.push(pokemonType.type.name)
+      }
+      // retornem l'array tipus que haviem creat buit i ja hem omplert
+
+      //si no poso join m'ho separa per comes, i si poso join sense especificar la separació també hi posa comes
+      //sense el join no torna un string, retorna un array, el join es per convertir un array a string, és el mètode que ho fa
+      //quan el apsso per comes li puc posar el que vulgui
+    return tipus.join(' / ');
+}
 
 //FUNCIÓ QUE CRIDAREM PER OBTENIR UN POKÉMON ALEATÒRI
 async function aleatoriPokemon() {
@@ -61,18 +82,19 @@ async function aleatoriPokemon() {
         const response = await fetch(`${api.url}${getRandom()}`);
         //per obtenir la data
         const pokeData = await response.json();
-
-        //per assegurarnos que les dades està sent passades
-        console.log(pokeData);
         //anem a remplaçar les dades que tenim per les que ens dona la api
         //innerHTML és per p, a, span i link, quna volem que es vegi algo a la pantalla a nivell de text
         img.src = pokeData.sprites.front_default || "https://www.elnacional.cat/uploads/s1/18/23/44/74/3852649_2_302x302.jpeg";
         namePoke.innerHTML = pokeData.species.name;
-        height.innerHTML = `Alçada: ${pokeData.height/10} M`;
+        height.innerHTML = `Alçada: ${pokeData.height/10} met.`;
         weight.innerHTML = `Pes: ${pokeData.weight/10} Kg`; 
         //accedeixo a types que és un array, indico la posició de l'array on vull entrar
-        //que és la 0, on hi ha el type i el name
-        typePoke.innerHTML = `Tipus: ${pokeData.types[0].type.name}`
+        //que és la 0, on hi ha el type i el name, amb stats faig el mateix
+         //crido la funció per obtenir els tipus del pokemon, que es troben a un array
+        typePoke.innerHTML = `Tipus: ${getPokemonTypes(pokeData.types)}`; //pokeData.types[0].type.name aquí hi ha el nom del tipus per cada posició de l'array
+        hp.innerHTML = `Vida: ${pokeData.stats[0].base_stat}`;
+        attack.innerHTML = `Atac: ${pokeData.stats[1].base_stat}`;
+        defense.innerHTML = `Defensa: ${pokeData.stats[2].base_stat}`;
 
         //id de pokemon card de l'html. La propietat flex estableix o 
         //retorna la longitud de l'element, en relació amb la resta d'elements flexibles dins del mateix contenidor.
@@ -108,11 +130,15 @@ async function searchPokemon(valorSearchBox) {
         //innerHTML és per p, a, span i link, quna volem que es vegi algo a la pantalla a nivell de text
         img.src = pokeData.sprites.front_default || "https://www.elnacional.cat/uploads/s1/18/23/44/74/3852649_2_302x302.jpeg";
         namePoke.innerHTML = pokeData.species.name;
-        height.innerHTML = `Alçada: ${pokeData.height/10} M`;
+        height.innerHTML = `Alçada: ${pokeData.height/10} met.`;
         weight.innerHTML = `Pes: ${pokeData.weight/10} Kg`; 
         //accedeixo a types que és un array, indico la posició de l'array on vull entrar
-        //que és la 0, on hi ha el type i el name
-        typePoke.innerHTML = `Tipus: ${pokeData.types[0].type.name}`
+        //que és la 0, on hi ha el type i el name, amb stats faig el mateix
+        //crido la funció per obtenir els tipus del pokemon, que es troben a un array
+        typePoke.innerHTML = `Tipus: ${getPokemonTypes(pokeData.types)}`;
+        hp.innerHTML = `Vida: ${pokeData.stats[0].base_stat}`;
+        attack.innerHTML = `Atac: ${pokeData.stats[1].base_stat}`;
+        defense.innerHTML = `Defensa: ${pokeData.stats[2].base_stat}`;
 
         //id de pokemon card de l'html. La propietat flex estableix o 
         //retorna la longitud de l'element, en relació amb la resta d'elements flexibles dins del mateix contenidor.
