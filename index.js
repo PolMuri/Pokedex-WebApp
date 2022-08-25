@@ -125,7 +125,6 @@ async function searchPokemon(valorSearchBox) {
         const pokeData = await response.json();
 
         //per assegurarnos que les dades està sent passades
-        console.log(pokeData);
         //anem a remplaçar les dades que tenim per les que ens dona la api
         //innerHTML és per p, a, span i link, quna volem que es vegi algo a la pantalla a nivell de text
         img.src = pokeData.sprites.front_default || "https://www.elnacional.cat/uploads/s1/18/23/44/74/3852649_2_302x302.jpeg";
