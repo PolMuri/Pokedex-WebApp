@@ -47,6 +47,28 @@ const clearName = () => {
     searchbox.value = "";
 }
 
+//rep el valor de l'html, ja que hi ha posat this a l'html a dins de la funció
+//al carregar la pàgina té el fons de pantalla que hi ha al CSS a .body a background-color
+//ja que al carregar la pàgina no s'ha seleccionat encara el color amb el botó select i seria blanc 
+//si l'style no tingués background color
+function canviaColorFons(valorQueRep) {
+    //mètode de depuració, a la Console del navegador veure com escriu el color
+    //seleccionat, ja que escriu el valor de la variable que la funció
+    //rep del fitxer html
+    console.log(valorQueRep.value);
+    //a la variable que creo body hi va el que rebo de l'id body
+    //del fitxer html
+    let body = document.getElementById("body");
+    //A dins de l'style del body hi ha el background color, és a dir, a l'html
+    //és així encara que no es vegi: style="background-color", llavors
+    //faig que la variable valorQueRep, que és el valor que rep la funció en froma de variable
+    //la qual he anomenat així, doncs la variable valorQueRep.value (que vol dir el valor, el que hi ha a dins d'aquesta variable)
+    //es guardi a dins del body.style.backgroundColor, així quan aquesta funció rebi un valor en forma de variable de l'html,
+    //l'utilitzarà per pintar el fons del body amb aquest valor en forma de variable que ha rebut, 
+    //ja sigui en format de nom(groc) o en format de codi de color(#e6d784) el value de l'html
+    body.style.backgroundColor = valorQueRep.value;
+}
+
 function getRandom() {
     //genero un número random entre 1 i els pokemons que hi ha
     //poso un número més dels pokémon que hi ha, ja que el random sempre torna un número menys

@@ -12,7 +12,35 @@
     <title>Pokédex</title>
 </head>
 
-<body>
+<body id="body">
+    <div class="colorFons" id="colorFons">
+    <select class="selectButton" id="selectButton"  onfocus="this.size=5;" onchange="canviaColorFons(this)" onblur="this.size=1;">
+        <option value="#DDCCAA">Selecciona un joc</option>
+        <option value="#FFFF00">Pokémon Amarillo</option>
+        <option value="#0000FF">Pokémon Azul</option>
+        <option value="#FFFFFF">Pokémon Blanco</option>
+        <option value="#d5d5d5">Pokémon Cristal</option>
+        <option value="#c8e5eb">Pokémon Diamante</option>
+        <option value="#ff0040">Pokémon Escarlata</option>
+        <option value="#009D71">Pokémon Esmeralda</option>
+        <option value="#808000">Pokémon HeartGold</option>
+        <option value="#e3e3d0">Pokémon Luna</option>
+        <option value="#000000">Pokémon Negro</option>
+        <option value="#ffbf00">Pokémon Oro</option>
+        <option value="#eae6ca">Pokémon Perla</option>
+        <option value="#C0C0C0">Pokémon Plata</option>
+        <option value="#7f7679">Pokémon Platino</option>
+        <option value="#008000">Pokémon Poison</option>
+        <option value="#625981">Pokémon Psychic</option>
+        <option value="#7d2181">Pokémon Púrpura</option>
+        <option value="#FF0000">Pokémon Rojo</option>
+        <option value="#9b111e">Pokémon Rubí</option>
+        <option value="#f39f18">Pokémon Sol</option>
+        <option value="#2d572c">Pokémon Verde Hoja</option>
+        <option value="#0F52BA">Pokémon Zafiro</option>
+    </select>
+    </div>
+
     <div>
     <button onclick="aleatoriPokemon()"class="btn-23">
     <span class="text">Aleatori</span>
