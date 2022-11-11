@@ -122,7 +122,7 @@ select#selectButton option[value="#7d2181"]   { background-color:#7d2181;}
 select#selectButton option[value="#FF0000"]   { background-color:#FF0000;}
 select#selectButton option[value="#9b111e"]   { background-color:#9b111e;}
 select#selectButton option[value="#f39f18"]   { background-color:#f39f18;}
-select#selectButton option[value="#2d572c"]   { background-color:#2d572c;}
+select#selectButton option[value="#2d572c"]   { background-color:#2d572c;} 
 select#selectButton option[value="#0F52BA"]   { background-color:#0F52BA;}
 
 body {
@@ -153,6 +153,8 @@ footer {
 }
 
 .selectButton {
+  appearance:none;
+  display: inline-block;
   width: 16rem;
   margin: 0.5rem;
   margin-left: 1.2rem;
