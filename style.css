@@ -100,6 +100,31 @@
   }
 }
 
+/* El color del botó select, cada joc de Pokémon té el seu color, així es pot "previsualitzar" el color al select*/
+select#selectButton option[value="#DDCCAA"]   { background-color:#DDCCAA;}
+select#selectButton option[value="#FFFF00"]   { background-color:#FFFF00;}
+select#selectButton option[value="#0000FF"]   { background-color:#3939d6;}
+select#selectButton option[value="#FFFFFF"]   { background-color:#FFFFFF;}
+select#selectButton option[value="#d5d5d5"]   { background-color:#d5d5d5;}
+select#selectButton option[value="#c8e5eb"]   { background-color:#c8e5eb;}
+select#selectButton option[value="#ff0040"]   { background-color:#ff0040;}
+select#selectButton option[value="#009D71"]   { background-color:#009D71;}
+select#selectButton option[value="#808000"]   { background-color:#808000;}
+select#selectButton option[value="#e3e3d0"]   { background-color:#e3e3d0;}
+select#selectButton option[value="#000000"]   { background-color:#323131;}
+select#selectButton option[value="#ffbf00"]   { background-color:#ffbf00;}
+select#selectButton option[value="#eae6ca"]   { background-color:#eae6ca;}
+select#selectButton option[value="#C0C0C0"]   { background-color:#C0C0C0;}
+select#selectButton option[value="#7f7679"]   { background-color:#7f7679;}
+select#selectButton option[value="#008000"]   { background-color:#008000;}
+select#selectButton option[value="#625981"]   { background-color:#625981;}
+select#selectButton option[value="#7d2181"]   { background-color:#7d2181;}
+select#selectButton option[value="#FF0000"]   { background-color:#FF0000;}
+select#selectButton option[value="#9b111e"]   { background-color:#9b111e;}
+select#selectButton option[value="#f39f18"]   { background-color:#f39f18;}
+select#selectButton option[value="#2d572c"]   { background-color:#2d572c;}
+select#selectButton option[value="#0F52BA"]   { background-color:#0F52BA;}
+
 body {
   padding-left: 0px;
     padding-bottom: 3em;

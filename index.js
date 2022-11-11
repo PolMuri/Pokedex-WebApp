@@ -22,7 +22,6 @@ const searchform = document.getElementById('search-form');
 //li passem l'id de searchboxi el guardem a una variable
 const searchbox = document.getElementById('searchbox');
 
-
 //El mètode addEventListener() enllaça un controlador d'esdeveniments a un document.
 //aAaquest form quan hi ha un event i hi farem anar una funció, la onSubmit, quan fem intro ens busca el que hem posat
 //L'event submit s'activa quan s'envia un <form>(el tinc a l'html), quan l'usuari fa clic en un botó d'enviament ( <button> o <input type="submit")
@@ -51,7 +50,7 @@ const clearName = () => {
 //al carregar la pàgina té el fons de pantalla que hi ha al CSS a .body a background-color
 //ja que al carregar la pàgina no s'ha seleccionat encara el color amb el botó select i seria blanc 
 //si l'style no tingués background color
-function canviaColorFons(valorQueRep) {
+function changeBgColor(valorQueRep) {
     //mètode de depuració, a la Console del navegador veure com escriu el color
     //seleccionat, ja que escriu el valor de la variable que la funció
     //rep del fitxer html
@@ -66,6 +65,7 @@ function canviaColorFons(valorQueRep) {
     //es guardi a dins del body.style.backgroundColor, així quan aquesta funció rebi un valor en forma de variable de l'html,
     //l'utilitzarà per pintar el fons del body amb aquest valor en forma de variable que ha rebut, 
     //ja sigui en format de nom(groc) o en format de codi de color(#e6d784) el value de l'html
+    
     body.style.backgroundColor = valorQueRep.value;
 }
 
