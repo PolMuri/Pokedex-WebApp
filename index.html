@@ -14,64 +14,66 @@
 
 <body id="body">
     <div class="colorFons" id="colorFons">
-    <select class="selectButton" id="selectButton"  onfocus="this.size=5;" onchange="changeBgColor(this)" onblur="this.size=1;">
-        <option value="#DDCCAA">Selecciona un joc com a fons</option>
-        <option value="#FFFF00">Pokémon Amarillo</option>
-        <option value="#0000FF">Pokémon Azul</option>
-        <option value="#FFFFFF">Pokémon Blanco</option>
-        <option value="#d5d5d5">Pokémon Cristal</option>
-        <option value="#c8e5eb">Pokémon Diamante</option>
-        <option value="#ff0040">Pokémon Escarlata</option>
-        <option value="#009D71">Pokémon Esmeralda</option>
-        <option value="#808000">Pokémon HeartGold</option>
-        <option value="#e3e3d0">Pokémon Luna</option>
-        <option value="#000000">Pokémon Negro</option>
-        <option value="#ffbf00">Pokémon Oro</option>
-        <option value="#eae6ca">Pokémon Perla</option>
-        <option value="#C0C0C0">Pokémon Plata</option>
-        <option value="#7f7679">Pokémon Platino</option>
-        <option value="#008000">Pokémon Poison</option>
-        <option value="#625981">Pokémon Psychic</option>
-        <option value="#7d2181">Pokémon Púrpura</option>
-        <option value="#FF0000">Pokémon Rojo</option>
-        <option value="#9b111e">Pokémon Rubí</option>
-        <option value="#f39f18">Pokémon Sol</option>
-        <option value="#2d572c">Pokémon Verde Hoja</option>
-        <option value="#0F52BA">Pokémon Zafiro</option>
-    </select>
+        <select class="selectButton" id="selectButton" onfocus="this.size=5;" onchange="changeBgColor(this)"
+            onblur="this.size=1;">
+            <option value="#DDCCAA">Selecciona un joc com a fons</option>
+            <option value="#FFFF00">Pokémon Amarillo</option>
+            <option value="#0000FF">Pokémon Azul</option>
+            <option value="#FFFFFF">Pokémon Blanco</option>
+            <option value="#d5d5d5">Pokémon Cristal</option>
+            <option value="#c8e5eb">Pokémon Diamante</option>
+            <option value="#ff0040">Pokémon Escarlata</option>
+            <option value="#009D71">Pokémon Esmeralda</option>
+            <option value="#808000">Pokémon HeartGold</option>
+            <option value="#e3e3d0">Pokémon Luna</option>
+            <option value="#000000">Pokémon Negro</option>
+            <option value="#ffbf00">Pokémon Oro</option>
+            <option value="#eae6ca">Pokémon Perla</option>
+            <option value="#C0C0C0">Pokémon Plata</option>
+            <option value="#7f7679">Pokémon Platino</option>
+            <option value="#008000">Pokémon Poison</option>
+            <option value="#625981">Pokémon Psychic</option>
+            <option value="#7d2181">Pokémon Púrpura</option>
+            <option value="#FF0000">Pokémon Rojo</option>
+            <option value="#9b111e">Pokémon Rubí</option>
+            <option value="#f39f18">Pokémon Sol</option>
+            <option value="#2d572c">Pokémon Verde Hoja</option>
+            <option value="#0F52BA">Pokémon Zafiro</option>
+        </select>
     </div>
 
     <div>
-    <button onclick="aleatoriPokemon()"class="btn-23">
-    <span class="text">Aleatori</span>
-    <span class="marquee" aria-hidden>Aleatori</span>
-    </button>
-    <main id="main">
-        <div class="search-form">
-        <form id="search-form">
-            <div class="searchbox">
-                <input type="text" autocomplete="off" placeholder="Busca un pokémon:" class="search" id="searchbox" />
+        <button onclick="aleatoriPokemon()" class="btn-23">
+            <span class="text">Aleatori</span>
+            <span class="marquee" aria-hidden>Aleatori</span>
+        </button>
+        <main id="main">
+            <div class="search-form">
+                <form id="search-form">
+                    <div class="searchbox">
+                        <input type="text" autocomplete="off" placeholder="Busca un pokémon:" class="search"
+                            id="searchbox" />
+                    </div>
+                </form>
             </div>
-        </form>
-        </div>
-
-        <div class="pokemon-card" id="card">
+            <div class="pokemon-card" id="card">
                 <img src="" id="pokemon-img" />
                 <div id="pokemon-name" class="pokemon-name"></div>
-            <div class="pokemon-stats" id="pokemon-stats">
-            <div id="pokemon-properties" class="pokemon-properties">
-                <div id="pokemon-height" class="pokemon-height"></div>
-                <div id="pokemon-weight" class="pokemon-weight"></div>
-                <div id="pokemon-type" class="pokemon-type"></div>
+                <div class="pokemon-stats" id="pokemon-stats">
+                    <div id="pokemon-properties" class="pokemon-properties">
+                        <div id="pokemon-height" class="pokemon-height"></div>
+                        <div id="pokemon-weight" class="pokemon-weight"></div>
+                        <div id="pokemon-type" class="pokemon-type"></div>
+                    </div>
+                    <div id="pokemon-properties1" class="pokemon-properties1">
+                        <div id="pokemon-hp" class="pokemon-hp"></div>
+                        <div id="pokemon-attack" class="pokemon-attack"></div>
+                        <div id="pokemon-defense" class="pokemon-defense"></div>
+                    </div>
+                </div>
             </div>
-            <div id="pokemon-properties1" class="pokemon-properties1">
-                <div id="pokemon-hp" class="pokemon-hp"></div>
-                <div id="pokemon-attack" class="pokemon-attack"></div>
-                <div id="pokemon-defense" class="pokemon-defense"></div>
-            </div>
-        </div>
-        </div>
-       
+    </div>
+
     </main>
     <footer>
         <p>Creat per: <a href="https://www.linkedin.com/in/pol-murillas-ledesma-29b23b241/">Pol Murillas Ledesma</a></p>
@@ -79,4 +81,3 @@
 </body>
 
 </html>
-
