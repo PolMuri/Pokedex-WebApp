@@ -329,7 +329,7 @@ p {
   justify-content: center;
   flex-direction: column;
   background-color: rgb(19, 9, 9);
-  border-radius: 20px;
+  border-radius: 7px;
   display: none;
 }
 
