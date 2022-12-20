@@ -250,6 +250,7 @@ select#selectButton option[value="#0F52BA"] {
 }
 
 body {
+  margin-left: 3.2%;
   padding-left: 0px;
   padding-bottom: 3em;
   position: relative;
@@ -454,6 +455,7 @@ p {
 }
 
 @media only screen and (max-width: 373px) {
+  
   .pokemon-card {
     position: relative;
     justify-content: center;
