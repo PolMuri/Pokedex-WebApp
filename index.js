@@ -1,7 +1,7 @@
 const api = {
     //la url de la api, des d'on n'extrec les dades
     //he posat pokemon perquè faré un buscador per filtrar pokemons individualment
-    url: 'https://pokeapi.co/api/v2/pokemon/'
+    url: "https://pokeapi.co/api/v2/pokemon/"
 }
 //EL DOM és l'html un cop ja renderitzat, el que veig al navegador
 
@@ -9,24 +9,24 @@ const api = {
 //i al CSS el defineixo amb class(per definir per classe)
 //per això a l'html tinc id i class
 const card = document.getElementById("card");
-const img = document.getElementById('pokemon-img');
-const namePoke = document.getElementById('pokemon-name');
-const height = document.getElementById('pokemon-height');
-const weight = document.getElementById('pokemon-weight');
-const typePoke = document.getElementById('pokemon-type');
-const hp = document.getElementById('pokemon-hp');
-const attack = document.getElementById('pokemon-attack');
-const defense = document.getElementById('pokemon-defense');
+const img = document.getElementById("pokemon-img");
+const namePoke = document.getElementById("pokemon-name");
+const height = document.getElementById("pokemon-height");
+const weight = document.getElementById("pokemon-weight");
+const typePoke = document.getElementById("pokemon-type");
+const hp = document.getElementById("pokemon-hp");
+const attack = document.getElementById("pokemon-attack");
+const defense = document.getElementById("pokemon-defense");
 //li passem l'id de search form i el guardem a una variable
-const searchform = document.getElementById('search-form');
+const searchform = document.getElementById("search-form");
 //li passem l'id de searchboxi el guardem a una variable
-const searchbox = document.getElementById('searchbox');
+const searchbox = document.getElementById("searchbox");
 
 //El mètode addEventListener() enllaça un controlador d'esdeveniments a un document.
 //aAaquest form quan hi ha un event i hi farem anar una funció, la onSubmit, quan fem intro ens busca el que hem posat
 //L'event submit s'activa quan s'envia un <form>(el tinc a l'html), quan l'usuari fa clic en un botó d'enviament ( <button> o <input type="submit")
 //Si és true, l'oient rep esdeveniments sintètics enviats pel contingut web (el valor predeterminat és fals per a Chrome i true per a pàgines web normals).
-searchform.addEventListener('submit', onSubmit, true);
+searchform.addEventListener("submit", onSubmit, true);
 
 //Creem la funcio de OnSubmit que rep un event
 //Un event HTML pot ser quelcom que fa el navegador o un usuari.
@@ -126,7 +126,7 @@ async function aleatoriPokemon() {
         clearName();
     } catch (err) {
         console.log(err);
-        alert('BUSCA UN POKÉMON VÀLID')
+        alert("BUSCA UN POKÉMON VÀLID")
     }
 }
 
@@ -169,6 +169,6 @@ async function searchPokemon(valorSearchBox) {
         clearName();
     } catch (err) {
         console.log(err);
-        alert('BUSCA UN POKÉMON VÀLID')
+        alert("BUSCA UN POKÉMON VÀLID")
     }
 }
