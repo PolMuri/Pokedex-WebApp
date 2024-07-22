@@ -1,6 +1,6 @@
-Code and comments in Catalan (my native lenguage).
+Code and comments in Catalan (my native lenguage). 
 
-# Pokedex-WebApp
+# Pokedex-WebApp [![flareon](https://cdn3.emoji.gg/emojis/31415-flareon.png)](https://emoji.gg/emoji/31415-flareon)
 A pokedex made with Javascript, CSS and HTML.
 You can search for Pokémon by name or click a button that shows one randomly. Additionally, you can select the background color based on the Pokémon game you choose.
 
