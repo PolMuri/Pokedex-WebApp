@@ -1,6 +1,6 @@
 # Pokedex-WebApp 
 
-[![flareon](https://cdn3.emoji.gg/emojis/31415-flareon.png)](https://emoji.gg/emoji/31415-flareon)
+![pokeball](https://github.com/user-attachments/assets/667ef2cf-4885-4d3e-af76-57ab53f76625)
 
 A pokedex made with Javascript, CSS and HTML.
 You can search for Pokémon by name or click a button that shows one randomly. Additionally, you can select the background color based on the Pokémon game you choose.
