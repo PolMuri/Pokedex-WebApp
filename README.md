@@ -14,3 +14,5 @@ Comments in Catalan (my native lenguage).
 ![image](https://github.com/PolMuri/Pokedex-WebApp/assets/109922379/653d0995-04d6-4127-8721-5554925a571f)
 
 ![image](https://github.com/PolMuri/Pokedex-WebApp/assets/109922379/54ad1349-2116-471e-a0af-b06a03b76c73)
+
+This application was built as a learning exercise to improve my skills in Javascript, CSS and HTML. Expect unoptimized code!
