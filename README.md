@@ -7,6 +7,8 @@ You can search for Pokémon by name or click a button that shows one randomly. A
 
 Comments in Catalan (my native lenguage). 
 
+This application was built as a learning exercise to improve my skills in Javascript, CSS and HTML. Expect unoptimized code!
+
 # Some examples
 
 ![image](https://github.com/PolMuri/Pokedex-WebApp/assets/109922379/4ee4f951-6af3-4478-abff-a9b55d614ed4)
@@ -15,4 +17,4 @@ Comments in Catalan (my native lenguage).
 
 ![image](https://github.com/PolMuri/Pokedex-WebApp/assets/109922379/54ad1349-2116-471e-a0af-b06a03b76c73)
 
-This application was built as a learning exercise to improve my skills in Javascript, CSS and HTML. Expect unoptimized code!
+
